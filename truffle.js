@@ -10,8 +10,7 @@ module.exports = {
     "projectApp.js": [
       "javascripts/_vendor/angular.min.js",
       "javascripts/mainProjectController.js"
-    ],
-    "images/": "images/"
+    ]
   },
   rpc: {
     host: "localhost",
