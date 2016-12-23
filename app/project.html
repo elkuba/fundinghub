@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>list projects</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="./app.css" rel='stylesheet' type='text/css'>
+ 
+
+  <base href="." />
+   <script src="./app.js"></script>
+  <script src="./projectApp.js"></script>
+</head>
+<body ng-app="projectApp" ng-controller="mainProjectController">
+
+<input type="text" id="txtName" ng-model="name" placeholder="name"></input>
+<input type="text" id="txtAmount" ng-model="amount" placeholder="e.g., 95"></input>
+<input type="text" id="txtDeadline" ng-model="deadline" placeholder="number of days"></input>
+<br>
+<button id="send" ng-click="createProject(name,amount,deadline)">create new</button>
+
+<br>
+<br>
+<h1>Projects {{balance}}</h1>
+<table>
+  <tr>
+    <th>name</th>
+    <th>amount</th>
+    <th>deadline</th>
+  </tr>
+  <tr ng-repeat="project in ListProjects">
+    <td><a href="project.html?{{project.addr}}">{{project.thename}}</a></td>
+    <td>{{project.amount}}</td>
+    <td>{{project.deadline}}</td>
+  </tr>
+</table>
+
+
+</body>
+</html>

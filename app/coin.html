@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MetaCoin - Default Truffle App</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="./app.css" rel='stylesheet' type='text/css'>
+  <!--<script src="./app.js"></script>-->
+
+  <base href="." />
+  <script src="./metaCoin.js"></script>
+</head>
+<body ng-app="metaCoinApp" ng-controller="metaCoinController">
+  <h1>MetaCoin</h1>
+  <h2>Example Truffle Dapp</h2>
+  <span id="balance">{{ balance }}</span>
+
+  <input type="text" id="amount" ng-model="amount" placeholder="e.g., 95"></input>
+  <br>
+  <input type="text" id="receiver" ng-model="receiver" placeholder="e.g., x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+  <br>
+  <button id="send" ng-click="sendCoin(amount, receiver)">Send MetaCoin</button>
+  <span id="status"></span>
+</body>
+</html>
